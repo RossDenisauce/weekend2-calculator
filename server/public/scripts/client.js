@@ -5,6 +5,7 @@ $(document).ready(start);
 function start(){
     console.log('In JQ'); 
     $('.argumentButton').on('click', getValues);
+    $('#clearButton').on('click', clearSpace);
 }
 
 
@@ -36,4 +37,8 @@ function getValues(){
             });
         }
     });
+}
+
+function clearSpace(){
+    $('#calcSpace').children().remove();
 }
