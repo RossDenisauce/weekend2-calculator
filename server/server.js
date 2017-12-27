@@ -42,13 +42,6 @@ function testType(obj){
     }
 }
 
-// function displayCalcSpace(){
-//     for (let i = 0; i < calcSpace.length; i++) {
-//         element = calcSpace[i];
-        
-//     }
-// }
-
 app.post('/calc', function(req, res){
     calcSpace.push(req.body);
     console.log(calcSpace);

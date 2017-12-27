@@ -33,6 +33,7 @@ function getValues(){
                 success: function(response){
                     console.log('Success get', response);
                     $('#calcSpace').append('<ul>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</ul>');
+                    $('#history').append('<p>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</p>')
                 }
             });
         }
