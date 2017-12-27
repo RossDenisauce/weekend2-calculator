@@ -26,16 +26,18 @@ function getValues(){
         },
         success: function(response){
             console.log('Success post', response);
-
-            $.ajax({
-                method: 'GET',
-                url: '/calc',
-                success: function(response){
-                    console.log('Success get', response);
-                    $('#calcSpace').append('<ul>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</ul>');
-                    $('#history').append('<p>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</p>')
-                }
-            });
+            $('#calcSpace').append('<ul>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</ul>');
+            $('#history').append('<p>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</p>');
+            
+            // $.ajax({
+            //     method: 'GET',
+            //     url: '/calc',
+            //     success: function(response){
+            //         console.log('Success get', response);
+            //         $('#calcSpace').append('<ul>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</ul>');
+            //         $('#history').append('<p>' + firstInput + ' ' + type + ' ' + secondInput + ' =' + response + '</p>');
+            //     }
+            // });
         }
     });
 }
