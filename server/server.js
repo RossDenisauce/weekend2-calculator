@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = 9000;
+const port = process.env.PORT || 9000;
 
 let calculation;
 let calcSpace = [];
